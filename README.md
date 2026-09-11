@@ -6,8 +6,8 @@ This project is a simple Python-based transcription pipeline using OpenAI Whispe
 - Accepts WAV and MP3 audio files
 - Transcribes speech into text
 - Returns timestamps per segment
-- Handles MP3, WAV, M4A, FLAC, and OGG
-- Splits long audio into 5-minute chunks
+- Handles MP3, WAV
+- Splits long audio into chunks
 
 ## Design decisions
 I chose Python because it has strong audio and speech-processing support. I used Whisper because it is open source, supports multiple languages, and provides segment timestamps. I used pydub with FFmpeg so different audio formats can be converted to a consistent 16 kHz mono WAV format before transcription.
@@ -35,5 +35,3 @@ Run a script, for example:
 python 02_transcribe_audio.py
 ```
 
-## Future improvements
-A production version would combine these scripts into one API service, add background workers, cloud storage, database persistence, authentication, rate limiting, retries, structured logging, and automatic cleanup of temporary files.
